@@ -1,5 +1,5 @@
 {
-    "sobre": "Sou João Pedro Machado (JPMach), estudante de Ciência da Computação na PUC Minas. Atuo como desenvolvedor Full Stack, com foco em projetos que resolvem problemas reais através de tecnologia. Tenho experiência com React, Node.js, Java, PostgreSQL e Spark.",
+    "sobre": "Sou João Pedro Machado (stdinJ), estudante de Ciência da Computação na PUC Minas. Atuo como desenvolvedor Full Stack, com foco em projetos que resolvem problemas reais através de tecnologia. Tenho experiência com React, Node.js, Java, PostgreSQL e Spark.",
     "projetos": [
         {
             "nome": "Save Screen Kids",
@@ -15,12 +15,17 @@
             "nome": "Site de Receitas Inteligente",
             "descricao": "Plataforma de receitas com estoque inteligente e lista de compras. Tecnologias: Node.js, MySQL, Firebase e JavaScript.",
             "link": ""
+        },
+        {
+            "nome": "Fórum Dev+",
+            "descricao": "Fórum de perguntas e respostas com autenticação Firebase, backend em Node.js e MySQL. Interface construída com EJS e rotas seguras.",
+            "link": "https://github.com/JPMach/forum-devplus"
         }
     ],
     "habilidades": [
         "JavaScript / Node.js",
-        "React / EJS",
-        "Java (Spring Boot)",
+        "React / Next.js",
+        "Java (Spark / JDBC)",
         "PostgreSQL / MySQL",
         "Automação com PowerShell",
         "HTML, CSS, Tailwind"

@@ -3,14 +3,14 @@ async function carregarDados() {
         const resposta = await fetch("data.json");
         const dados = await resposta.json();
 
-        // Preencher "Sobre mim"
+        // Sobre
         document.getElementById("sobre-texto").textContent = dados.sobre;
 
-        // Preencher Projetos
-        const containerProjetos = document.getElementById("projetos-container");
+        // Projetos
+        const containerProjetos = document.getElementById("projetos-carousel");
         dados.projetos.forEach(projeto => {
             const div = document.createElement("div");
-            div.className = "bg-gray-800 rounded-xl p-6 shadow hover:shadow-lg transition";
+            div.className = "min-w-[300px] bg-gray-800 rounded-xl p-6 shadow hover:shadow-lg transition";
             div.innerHTML = `
         <h3 class="text-xl font-semibold mb-2">${projeto.nome}</h3>
         <p class="mb-4">${projeto.descricao}</p>
@@ -19,7 +19,16 @@ async function carregarDados() {
             containerProjetos.appendChild(div);
         });
 
-        // Preencher Habilidades
+        // Navegação do carrossel
+        const scrollAmount = 320;
+        document.getElementById("next").addEventListener("click", () => {
+            containerProjetos.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+        document.getElementById("prev").addEventListener("click", () => {
+            containerProjetos.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        });
+
+        // Habilidades
         const listaHabilidades = document.getElementById("habilidades-lista");
         dados.habilidades.forEach(habilidade => {
             const li = document.createElement("li");
@@ -32,11 +41,12 @@ async function carregarDados() {
     }
 }
 
-// Disparar após carregar o DOM
-document.addEventListener("DOMContentLoaded", carregarDados);
+// Formulário
+document.addEventListener("DOMContentLoaded", () => {
+    carregarDados();
 
-// Simular envio de formulário
-document.querySelector("form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Mensagem enviada! (Simulação)");
+    document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Mensagem enviada! (Simulação)");
+    });
 });
