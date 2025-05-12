@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>João Pedro Machado | Desenvolvedor Full Stack</title>
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+    <!-- Header -->
+    <header class="bg-gray-800 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">stdinJ</h1>
+            <nav class="space-x-4">
+                <a href="#sobre" class="hover:underline">Sobre</a>
+                <a href="#projetos" class="hover:underline">Projetos</a>
+                <a href="#habilidades" class="hover:underline">Habilidades</a>
+                <a href="#contato" class="hover:underline">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sobre mim -->
+    <section id="sobre" class="container mx-auto py-16 px-4">
+        <h2 class="text-3xl font-bold mb-4">Sobre mim</h2>
+        <p id="sobre-texto" class="text-lg"></p>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="container mx-auto py-16 px-4">
+        <h2 class="text-3xl font-bold mb-8">Projetos</h2>
+        <div id="projetos-container" class="grid md:grid-cols-2 gap-8"></div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="container mx-auto py-16 px-4">
+        <h2 class="text-3xl font-bold mb-4">Habilidades</h2>
+        <ul id="habilidades-lista" class="grid grid-cols-2 md:grid-cols-3 gap-4 text-lg"></ul>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="container mx-auto py-16 px-4">
+        <h2 class="text-3xl font-bold mb-4">Contato</h2>
+        <form class="max-w-xl">
+            <input type="text" placeholder="Nome" class="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600" />
+            <input type="email" placeholder="Email"
+                class="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600" />
+            <textarea placeholder="Mensagem"
+                class="w-full p-2 mb-4 rounded bg-gray-700 border border-gray-600"></textarea>
+            <button type="submit" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center p-4 bg-gray-800 mt-8">
+        <p>&copy; 2025 João Pedro Machado | Desenvolvedor Full Stack</p>
+    </footer>
+
+</body>
+
+</html>

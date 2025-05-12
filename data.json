@@ -1,0 +1,28 @@
+{
+    "sobre": "Sou João Pedro Machado (JPMach), estudante de Ciência da Computação na PUC Minas. Atuo como desenvolvedor Full Stack, com foco em projetos que resolvem problemas reais através de tecnologia. Tenho experiência com React, Node.js, Java, PostgreSQL e Spark.",
+    "projetos": [
+        {
+            "nome": "Save Screen Kids",
+            "descricao": "Sistema que ajuda pais a equilibrarem o uso de telas por crianças. Back-end em Java + PostgreSQL, front-end interativo com HTML e JS.",
+            "link": "https://github.com/ICEI-PUC-Minas-CC-TI/plmg-cc-ti2-2025-1-g02-savescreenkids"
+        },
+        {
+            "nome": "War Fast",
+            "descricao": "Versão online do jogo WAR, com foco em tempo real e multiplayer. Desenvolvido com Node.js, HTML, CSS e hospedado em servidor Linux.",
+            "link": ""
+        },
+        {
+            "nome": "Site de Receitas Inteligente",
+            "descricao": "Plataforma de receitas com estoque inteligente e lista de compras. Tecnologias: Node.js, MySQL, Firebase e JavaScript.",
+            "link": ""
+        }
+    ],
+    "habilidades": [
+        "JavaScript / Node.js",
+        "React / EJS",
+        "Java (Spring Boot)",
+        "PostgreSQL / MySQL",
+        "Automação com PowerShell",
+        "HTML, CSS, Tailwind"
+    ]
+}
