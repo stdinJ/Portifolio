@@ -9,17 +9,17 @@
         {
             "nome": "War Fast",
             "descricao": "Versão online do jogo WAR, com foco em tempo real e multiplayer. Desenvolvido com Node.js, HTML, CSS e hospedado em servidor Linux.",
-            "link": ""
+            "link": "https://github.com/stdinJ/WarFast"
         },
         {
             "nome": "Site de Receitas Inteligente",
             "descricao": "Plataforma de receitas com estoque inteligente e lista de compras. Tecnologias: Node.js, MySQL, Firebase e JavaScript.",
-            "link": ""
+            "link": "https://github.com/stdinJ/List-Cook"
         },
         {
-            "nome": "Fórum Dev+",
-            "descricao": "Fórum de perguntas e respostas com autenticação Firebase, backend em Node.js e MySQL. Interface construída com EJS e rotas seguras.",
-            "link": "https://github.com/JPMach/forum-devplus"
+            "nome": "Advent of Code",
+            "descricao": "Projeto de estudo em Logica de Programação e Linguagem Java",
+            "link": "https://github.com/stdinJ/AdventOfCode"
         }
     ],
     "habilidades": [
