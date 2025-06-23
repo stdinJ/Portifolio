@@ -10,12 +10,12 @@ async function carregarDados() {
         const containerProjetos = document.getElementById("projetos-carousel");
         dados.projetos.forEach(projeto => {
             const div = document.createElement("div");
-            div.className = "min-w-[300px] bg-gray-800 rounded-xl p-6 shadow hover:shadow-lg transition";
+            div.className = "min-w-[300px] bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300 flex flex-col justify-between";
             div.innerHTML = `
-        <h3 class="text-xl font-semibold mb-2">${projeto.nome}</h3>
-        <p class="mb-4">${projeto.descricao}</p>
-        ${projeto.link ? `<a href="${projeto.link}" target="_blank" class="text-blue-400 hover:underline">Ver no GitHub</a>` : ""}
-      `;
+                <h3 class="text-xl font-semibold mb-2">${projeto.nome}</h3>
+                <p class="mb-4 flex-grow">${projeto.descricao}</p>
+                ${projeto.link ? `<a href="${projeto.link}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Ver no GitHub</a>` : ""}
+            `;
             containerProjetos.appendChild(div);
         });
 
@@ -33,6 +33,7 @@ async function carregarDados() {
         dados.habilidades.forEach(habilidade => {
             const li = document.createElement("li");
             li.textContent = habilidade;
+            li.className = "bg-gray-800 rounded-md p-4 text-center shadow-sm";
             listaHabilidades.appendChild(li);
         });
 
@@ -41,12 +42,6 @@ async function carregarDados() {
     }
 }
 
-// Formulário
 document.addEventListener("DOMContentLoaded", () => {
     carregarDados();
-
-    document.querySelector("form").addEventListener("submit", function (e) {
-        e.preventDefault();
-        alert("Mensagem enviada! (Simulação)");
-    });
 });

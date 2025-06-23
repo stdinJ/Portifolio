@@ -1,5 +1,5 @@
 {
-    "sobre": "Sou João Pedro Machado (stdinJ), estudante de Ciência da Computação na PUC Minas. Atuo como desenvolvedor Full Stack, com foco em projetos que resolvem problemas reais através de tecnologia. Tenho experiência com React, Node.js, Java, PostgreSQL e Spark.",
+    "sobre": "Sou João Pedro Machado (stdinJ), Atuo como desenvolvedor Full Stack, com foco em projetos que resolvem problemas reais através de tecnologia. Tenho experiência com React, Node.js, Java, PostgreSQL e Spark. Atualmente sou estudante de Ciência da Computação na PUC Minas. ",
     "projetos": [
         {
             "nome": "Save Screen Kids",
@@ -13,21 +13,21 @@
         },
         {
             "nome": "Site de Receitas Inteligente",
-            "descricao": "Plataforma de receitas com estoque inteligente e lista de compras. Tecnologias: Node.js, MySQL, Firebase e JavaScript.",
+            "descricao": "Plataforma de receitas com estoque inteligente e lista de compras. Tecnologias: Spring Boot, MySQL, Apache Kafka, React e JavaScript.",
             "link": "https://github.com/stdinJ/List-Cook"
         },
         {
             "nome": "Advent of Code",
-            "descricao": "Projeto de estudo em Logica de Programação e Linguagem Java",
+            "descricao": "Projeto de estudo em Lógica de Programação e Linguagem Java.",
             "link": "https://github.com/stdinJ/AdventOfCode"
         }
     ],
     "habilidades": [
         "JavaScript / Node.js",
         "React / Next.js",
-        "Java (Spark / JDBC)",
+        "Java / Spring Boot",
         "PostgreSQL / MySQL",
-        "Automação com PowerShell",
+        "Automação com Bash",
         "HTML, CSS, Tailwind"
     ]
 }

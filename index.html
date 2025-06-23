@@ -3,80 +3,76 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>João Pedro Machado - Portfólio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Scrollbar estilizado para o carrossel */
+        #projetos-carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        #projetos-carousel::-webkit-scrollbar-thumb {
+            background-color: #3b82f6;
+            /* azul */
+            border-radius: 4px;
+        }
+    </style>
 </head>
 
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-gray-900 text-white font-sans min-h-screen flex flex-col">
     <header class="bg-gray-800 shadow">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold">João Pedro Machado</h1>
-            <nav>
+            <nav class="flex items-center space-x-6">
                 <ul class="flex space-x-4">
-                    <li><a href="#sobre" class="hover:text-blue-400">Sobre</a></li>
-                    <li><a href="#projetos" class="hover:text-blue-400">Projetos</a></li>
-                    <li><a href="#habilidades" class="hover:text-blue-400">Habilidades</a></li>
-                    <li><a href="#contato" class="hover:text-blue-400">Contato</a></li>
+                    <li><a href="#sobre" class="hover:text-blue-400 transition">Sobre</a></li>
+                    <li><a href="#projetos" class="hover:text-blue-400 transition">Projetos</a></li>
+                    <li><a href="#habilidades" class="hover:text-blue-400 transition">Habilidades</a></li>
                 </ul>
+                <a href="Curriculo_Joao-Pedro-Machado.pdf" download
+                    class="ml-6 px-4 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition text-white font-semibold whitespace-nowrap">
+                    Baixar CV
+                </a>
             </nav>
         </div>
     </header>
 
     <!-- Sobre mim -->
-    <section id="sobre" class="container mx-auto py-16 px-4">
-        <h2 class="text-3xl font-bold mb-8">Sobre mim</h2>
-
-        <div class="flex flex-col md:flex-row items-center gap-8">
-            <!-- Foto -->
-            <img id="foto-perfil" src="foto-perfil.jpeg" alt="Foto de João Pedro Machado"
-                class="w-40 h-40 rounded-full object-cover border-4 border-blue-500 shadow" />
-
-            <!-- Texto -->
-            <p id="sobre-texto" class="text-lg max-w-2xl"></p>
-        </div>
+    <section id="sobre" class="container mx-auto py-16 px-4 flex flex-col md:flex-row items-center gap-10">
+        <img id="foto-perfil" src="foto-perfil.jpeg" alt="Foto de João Pedro Machado"
+            class="w-48 h-48 rounded-full object-cover border-4 border-blue-500 shadow-lg flex-shrink-0" />
+        <p id="sobre-texto" class="text-lg max-w-3xl leading-relaxed"></p>
     </section>
 
     <!-- Projetos com carrossel -->
     <section id="projetos" class="container mx-auto py-16 px-4">
-        <h2 class="text-3xl font-bold mb-8">Projetos</h2>
+        <h2 class="text-3xl font-bold mb-8 border-b border-blue-600 pb-2">Projetos</h2>
 
         <div class="relative">
             <button id="prev"
-                class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-gray-700 rounded-full hover:bg-gray-600">
-                ⟵
-            </button>
+                class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-gray-700 rounded-full hover:bg-gray-600 transition"
+                aria-label="Projeto anterior">⟵</button>
             <button id="next"
-                class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-gray-700 rounded-full hover:bg-gray-600">
-                ⟶
-            </button>
+                class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-gray-700 rounded-full hover:bg-gray-600 transition"
+                aria-label="Próximo projeto">⟶</button>
 
-            <div id="projetos-carousel" class="flex gap-6 overflow-x-auto scroll-smooth pb-4"></div>
+            <div id="projetos-carousel"
+                class="flex gap-6 overflow-x-auto scroll-smooth pb-4 scrollbar-thin scrollbar-thumb-blue-500">
+            </div>
         </div>
     </section>
 
     <!-- Habilidades -->
     <section id="habilidades" class="container mx-auto py-16 px-4">
-        <h2 class="text-3xl font-bold mb-4">Habilidades</h2>
-        <ul id="habilidades-lista" class="grid grid-cols-2 md:grid-cols-3 gap-4 text-lg"></ul>
+        <h2 class="text-3xl font-bold mb-6 border-b border-blue-600 pb-2">Habilidades</h2>
+        <ul id="habilidades-lista" class="grid grid-cols-2 md:grid-cols-3 gap-6 text-lg">
+            <!-- Será preenchido pelo JS -->
+        </ul>
     </section>
 
-    <!-- Contato -->
-    <section id="contato" class="container mx-auto py-16 px-4">
-        <h2 class="text-3xl font-bold mb-4">Contato</h2>
-        <form class="space-y-4 max-w-lg">
-            <input type="text" placeholder="Seu nome" class="w-full p-3 rounded bg-gray-800 border border-gray-600"
-                required />
-            <input type="email" placeholder="Seu email" class="w-full p-3 rounded bg-gray-800 border border-gray-600"
-                required />
-            <textarea placeholder="Sua mensagem" class="w-full p-3 rounded bg-gray-800 border border-gray-600" rows="5"
-                required></textarea>
-            <button type="submit" class="bg-blue-600 px-6 py-2 rounded hover:bg-blue-700 transition">Enviar</button>
-        </form>
-    </section>
-
-    <footer class="bg-gray-800 text-center py-4 mt-10">
-        <p>&copy; 2025 João Pedro Machado. Todos os direitos reservados.</p>
+    <footer class="bg-gray-800 text-center py-6 mt-auto">
+        <p class="text-gray-400">&copy; 2025 João Pedro Machado. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
